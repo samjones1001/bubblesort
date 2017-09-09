@@ -14,4 +14,15 @@ describe Bubblesort do
       expect(subject.sort([3,1,4,2])).to eq([1,2,3,4])
     end
   end
+
+  describe '#is_sorted?' do
+    it 'returns true when passed to identical arrays' do
+      expect(subject.is_sorted?([1,2,3], [1,2,3])).to be(true)
+    end
+
+    it 'returns false when passed two different arrays' do
+      expect(subject.is_sorted?([1,2,3], [1,3,2])).to be(false)
+    end
+  end
+
 end
